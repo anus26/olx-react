@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { IoIosGitCompare } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
+import Navigation  from './Navigation/Navigation';
 
 
 
@@ -22,7 +23,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Header = () => {
   return (
-   <header>
+   <header className='bg-white'>
     <div className='top-strip py-2  border-t-[1px] border-gray-250 border-b-[1px]'>
       <div className='container'>
 <div className='flex items-center justify-between'>
@@ -43,11 +44,11 @@ const Header = () => {
 </div>
 </div>
       </div>
-    </div>
-    <div className='header py-3 ' >
+    </div> 
+    <div className='header py-3  border-t-[1px] border-gray-250 border-b-[1px]' >
 <div className='coontainer flex items-center justify-between' >
 <div className='col1 px-20 w-[30%]  '>
-<Link to={'/'}><img src="/images/OPPORTUNITIES (2).png" className='w-32 h-20 '  /></Link>
+<Link to={'/'}><img src="/images/by.png" className='w-20 h-18 rounded-full  '  /><p className='text-red-600'>Colaci Collection</p></Link>
 </div>
 <div className='col2 w-[40%]'><Search/></div>
 <div className='col3 w-[30%] flex items-center '>
@@ -81,6 +82,10 @@ const Header = () => {
 </div>
 </div>
     </div>
+  
+  <Navigation/>
+
+
 
    </header>
   )
