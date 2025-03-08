@@ -5,6 +5,7 @@ import { FaAngleDown } from "react-icons/fa";
 import { Link } from 'react-router';
 import { IoIosRocket } from "react-icons/io";
 import CategoryPanel from './CategoryPanel';
+import '../Navigation/Styles.css';
 const Navigation = () => {
     const [isopencatpanel ,setIsOpenCatPanel]=useState(false)
     const openCategoryPanel=()=>{
@@ -17,7 +18,7 @@ const Navigation = () => {
   <nav className='py-2'>
     <div className='container flex items-center  justify-end gap-8'>
         <div className='col_1 w-[20%] '>
-     <Button className='!text-black gap-2 ' onClick={openCategoryPanel}><RiMenu2Fill  />Shop By Categories<FaAngleDown  className=' font-bold'/></Button>
+     <Button className='!text-black gap-2 ' onClick={openCategoryPanel}><RiMenu2Fill  />Shop By Categories<FaAngleDown  className=' font-bold text-[13px] m1-auto'/></Button>
         </div>
         <div className='col_2 w-[65%]'>
 
