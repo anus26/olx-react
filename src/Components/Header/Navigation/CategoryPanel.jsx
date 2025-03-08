@@ -6,10 +6,19 @@ import { IoClose } from "react-icons/io5";
 import { FaFolderPlus } from "react-icons/fa";
 import { Link } from 'react-router';
 const CategoryPanel = (props) => {
-
+ const [submenuindex,setSubMenuIndex ]=useState(null)
     const toggleDrawer = (newOpen) => () => {
     props.setIsOpenCatPanel(newOpen)
       };
+      const opensubmenu=(index)=>{
+        if (submenuindex ===index) {
+
+            setSubMenuIndex(null)
+            
+        }else{
+            setSubMenuIndex(index)
+        }
+      }
    
 const DrawerList = (
     <Box sx={{ width: 250 }} role="presentation " className='categorypanel'>
@@ -21,7 +30,9 @@ const DrawerList = (
 
            <Button className='w-full !text-left !justify-start px-3 !text-black'>Fashion</Button>
           </Link> 
-            <FaFolderPlus className='absolute top-3 right-5' />
+            <FaFolderPlus className='absolute top-3 right-5' onClick={()=>opensubmenu(0)} />
+                {
+                    submenuindex === 0 &&
             <ul className='submenu absolute top-[100%] left-0 w-full pl-3'>
                 <li className='list-none  relative '>
                     <Link to="/">
@@ -29,7 +40,7 @@ const DrawerList = (
                 <Button className='w-full !text-left !justify-start px-3 !text-black'>Apperal</Button>
                     </Link>
                 <FaFolderPlus className='absolute top-3 right-5' />
-            <ul className='submenu absolute top-[100%] left-0 w-full pl-3'>
+            <ul className='inner_submenu absolute top-[100%] left-0 w-full pl-3'>
                 <li className='list-none  relative mb-2'>
                 <Link to="/" className='link w-full !text-left !justify-start !px-3 transition text-[14px]'>Smart Tablets</Link>
 
@@ -45,6 +56,7 @@ const DrawerList = (
                 <li className='list-none  relative mb-2 '>
                 <Link to="/" className='link w-full !text-left !justify-start !px-3 transition text-[14px]'>Rolling Diamond</Link>
 
+
                 </li>
               
 
@@ -53,6 +65,7 @@ const DrawerList = (
               
 
             </ul>
+}
         </li>
     </ul>
   </div>
