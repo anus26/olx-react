@@ -21,17 +21,104 @@ const Navigation = () => {
      <Button className='!text-black gap-2 ' onClick={openCategoryPanel}><RiMenu2Fill  />Shop By Categories<FaAngleDown  className=' font-bold text-[13px] m1-auto'/></Button>
         </div>
         <div className='col_2 w-[65%]'>
-
-       <ul className='flex gap-5'>
+ 
+       <ul className='flex gap-5 nav'>
     <li className='!list-none'>
         <Link to='/' className='link transition text-15px font-[500]'>Home</Link>
     </li>
     <li className='list-none'>
         <Link to='/' className='link transition text-15px font-[500]'>Groceries</Link>
     </li>
-    <li className='list-none'>
-        <Link to='/' className='link transition text-15px font-[500]'>Fashion</Link>
+    <li className='list-none relative '>
+        <Link to='/' className='link transition text-15px font-[500] '>Fashion</Link>
+      
+    <div className='submenu absolute top-[120%] left-[0%] min-w-[200px] bg-white
+    shadow-md  opacity-0 trasnition-all'>
+
+        <ul>
+            <li className='list-none ' >
+                <Link to='/' className='w-full'>
+  
+                <Button className='!text-black w-full !text-left !justify-start'>Men</Button>
+                <div className='submenu absolute top-[0%] left-[100%] min-w-[200px] bg-white
+    shadow-md  opacity-0 trasnition-all'>
+
+        <ul>
+            <li className='list-none ' >
+                <Link to='/' className='w-full'>
+  
+                <Button className='!text-black w-full !text-left !justify-start'>Men</Button>
+   
+
+   
+                </Link>
+                
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Woman</Button>
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Kids</Button>
+
+                </Link>
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Girl</Button>
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Boys</Button>
+                </Link>
+
+            </li>
+           
+        </ul>
+
+    </div>
+
+   
+                </Link>
+                
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Woman</Button>
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Kids</Button>
+
+                </Link>
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Girl</Button>
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Boys</Button>
+                </Link>
+
+            </li>
+           
+        </ul>
+
+    </div>
     </li>
+
     <li className='list-none'>
         <Link to='/' className='link transition text-15px font-[500]'>Electronics</Link>
     </li>
