@@ -16,4 +16,4 @@ body{
     
 } */
 
-.link:hover{color:#ff5252 ;}
+.link:hover{color:#ff5252 ; text-decoration: none;}

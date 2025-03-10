@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        primary:'#ff5252'
+        primary:'#ff5252',
+        black:'oklch(0.444 0.011 73.639)'
       },
       backgroundColor:{
         primary :'#ff5252'

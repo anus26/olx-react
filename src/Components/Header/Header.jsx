@@ -48,7 +48,7 @@ const Header = () => {
     <div className='header py-3  border-t-[1px] border-gray-250 border-b-[1px]' >
 <div className='coontainer flex items-center justify-between' >
 <div className='col1 px-20 w-[30%]  '>
-<Link to={'/'}><img src="/images/by.png" className='w-20 h-18 rounded-full  '  /><p className='text-red-600'>Colaci Collection</p></Link>
+<Link to={'/'}><img src="/images/logo.jpg"     /></Link>
 </div>
 <div className='col2 w-[40%]'><Search/></div>
 <div className='col3 w-[30%] flex items-center '>
