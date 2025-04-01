@@ -13,6 +13,28 @@ const Navigation = () => {
   true
         )
     }
+    const categories = [
+        {
+          name: "Bags",
+          subcategory: [
+            { name: "Men Bags" },
+            { name: "Women Bags" }
+          ],
+        },
+        {
+          name: "Beauty",
+          subcategory: [
+            { name: "Facial Kit" }
+          ],
+        },
+        {
+            name: "Footwear",
+            subcategory:[
+
+                {name: "Wooden Chair"},{name: "Sneakers Shoes"},{ name:"Purse"}, {name:"Xbox Controller"}
+            ],
+          },
+      ];
   return (
     <>
   <nav className='py-2'>
@@ -26,8 +48,92 @@ const Navigation = () => {
     <li className='!list-none'>
         <Link to='/' className='link transition text-15px font-[500]'>Home</Link>
     </li>
-    <li className='list-none'>
+    <li className='list-none relative'>
         <Link to='/' className='link transition text-15px font-[500]'>Groceries</Link>
+        <div className='submenu absolute top-[120%] left-[0%] min-w-[150px] bg-white
+    shadow-md  opacity-0 trasnition-all'>
+
+        <ul>
+            <li className='list-none ' >
+                <Link to='/' className='w-full'>
+  
+                <Button className='!text-black w-full !text-left !justify-start'>Rice</Button>
+ 
+
+   
+                </Link>
+                
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Flour (wheat)</Button>
+
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Sugar</Button>
+
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>cooking oil</Button>
+
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>salt</Button>
+
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>spice (masala)</Button>
+
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>lentils (daal)</Button>
+
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Tea</Button>
+
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Milk</Button>
+
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>EGG</Button>
+
+                </Link>
+
+            </li>
+    
+          
+           
+        </ul>
+
+    </div>
     </li>
     <li className='list-none relative '>
         <Link to='/' className='link transition text-15px font-[500] '>Fashion</Link>
@@ -179,7 +285,7 @@ const Navigation = () => {
             <li className='list-none ' >
                 <Link to='/' className='w-full'>
   
-                <Button className='!text-black w-full !text-left !justify-start '>T-Shirts</Button>
+                <Button className='!text-black w-full !text-left !justify-start '>Samsung</Button>
    
 
    
@@ -189,13 +295,13 @@ const Navigation = () => {
             </li>
             <li className='list-none'>
             <Link to='/' className='w-full'>
-                <Button className='!text-black w-full !text-left !justify-start'>Jeans</Button>
+                <Button className='!text-black w-full !text-left !justify-start'>OPPO</Button>
                 </Link>
 
             </li>
             <li className='list-none'>
             <Link to='/' className='w-full'>
-                <Button className='!text-black w-full !text-left !justify-start'>Casual Shirts</Button>
+                <Button className='!text-black w-full !text-left !justify-start'>Vivo</Button>
 
                 </Link>
             </li>
@@ -220,7 +326,7 @@ const Navigation = () => {
             <li className='list-none ' >
                 <Link to='/' className='w-full'>
   
-                <Button className='!text-black w-full !text-left !justify-start '>HandBags</Button>
+                <Button className='!text-black w-full !text-left !justify-start '>Thinkpads</Button>
    
 
    
@@ -230,13 +336,14 @@ const Navigation = () => {
             </li>
             <li className='list-none'>
             <Link to='/' className='w-full'>
-                <Button className='!text-black w-full !text-left !justify-start'>Heels</Button>
+                <Button className='!text-black w-full !text-left !justify-start'>DELL
+                </Button>
                 </Link>
 
             </li>
             <li className='list-none'>
             <Link to='/' className='w-full'>
-                <Button className='!text-black w-full !text-left !justify-start'>Jewellery</Button>
+                <Button className='!text-black w-full !text-left !justify-start'>PH</Button>
 
                 </Link>
             </li>
@@ -259,7 +366,7 @@ const Navigation = () => {
             <li className='list-none ' >
                 <Link to='/' className='w-full'>
   
-                <Button className='!text-black w-full !text-left !justify-start '>Jeans</Button>
+                <Button className='!text-black w-full !text-left !justify-start '>Qurtaz</Button>
    
 
    
@@ -269,13 +376,13 @@ const Navigation = () => {
             </li>
             <li className='list-none'>
             <Link to='/' className='w-full'>
-                <Button className='!text-black w-full !text-left !justify-start'>Tops</Button>
+                <Button className='!text-black w-full !text-left !justify-start'>Rolex</Button>
                 </Link>
 
             </li>
             <li className='list-none'>
             <Link to='/' className='w-full'>
-                <Button className='!text-black w-full !text-left !justify-start'>Cosmestics</Button>
+                <Button className='!text-black w-full !text-left !justify-start'>Apple</Button>
 
                 </Link>
             </li>
@@ -290,14 +397,14 @@ const Navigation = () => {
             <li className='list-none'>
             <Link to='/' className='w-full'>
                 <Button className='!text-black w-full !text-left !justify-start'>Televisions</Button>
-                <div className='submenu absolute top-[0%] mt-16 left-[100%] min-w-[150px] bg-white
+                <div className='submenu absolute top-[0%] mt-20 left-[100%] min-w-[150px] bg-white
     shadow-md  opacity-0 trasnition-all'>
 
         <ul>
             <li className='list-none ' >
                 <Link to='/' className='w-full'>
   
-                <Button className='!text-black w-full !text-left !justify-start '>Jeans</Button>
+                <Button className='!text-black w-full !text-left !justify-start '>Sony</Button>
    
 
    
@@ -307,13 +414,13 @@ const Navigation = () => {
             </li>
             <li className='list-none'>
             <Link to='/' className='w-full'>
-                <Button className='!text-black w-full !text-left !justify-start'>Tops</Button>
+                <Button className='!text-black w-full !text-left !justify-start'>Germany</Button>
                 </Link>
 
             </li>
             <li className='list-none'>
             <Link to='/' className='w-full'>
-                <Button className='!text-black w-full !text-left !justify-start'>Cosmestics</Button>
+                <Button className='!text-black w-full !text-left !justify-start'>Pansonics</Button>
 
                 </Link>
             </li>
@@ -331,15 +438,87 @@ const Navigation = () => {
 
     </div>
     </li>
-    <li className='list-none'>
+    {/* <li className='list-none relative'>
         <Link to='/' className='link transition text-15px font-[500]'>Footwear</Link>
+        <div className='submenu absolute top-[120%] left-[0%] min-w-[150px] bg-white
+    shadow-md  opacity-0 trasnition-all'>
+
+        <ul>
+            <li className='list-none ' >
+                <Link to='/' className='w-full'>
+  
+                <Button className='!text-black w-full !text-left !justify-start'>Men</Button>
+  
+
+   
+                </Link>
+                
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>women</Button>
+  
+                </Link>
+
+            </li>
+           
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Kids shoes</Button>
+  
+                </Link>
+
+            </li>
+            <li className='list-none'>
+            <Link to='/' className='w-full'>
+                <Button className='!text-black w-full !text-left !justify-start'>Girl shoes</Button>
+  
+                </Link>
+
+            </li>
+          
+           
+        </ul>
+
+    </div>
+    </li>  */}
+
+        {/* <Link to='/' className='link transition text-15px font-[500]'>Bags</Link> */}
+        <ul className="list-none flex gap-2 ">
+  {categories.map((item, index) => (
+    <li key={index} className="relative group">
+      <Link to="/" className="link transition text-15px font-[500]">{item.name}</Link>
+      {item.subcategory && (
+        <ul className=" submenu absolute top-[120%] left-0 min-w-[150px] bg-white shadow-md opacity-0 transition-all group-hover:opacity-100">
+          {item.subcategory.map((subItem, subIndex) => (
+            <li key={subIndex}>
+              <button className=" block w-full text-left text-20px  hover:bg-gray-200 px-3 py-2 text-gray-800">{subItem.name}</button>
+            </li>
+          ))}
+        </ul>
+      )}
     </li>
-    <li className='list-none'>
-        <Link to='/' className='link transition text-15px font-[500]'>Bags</Link>
-    </li>
-    <li className='list-none'>
-        <Link to='/' className='link transition text-15px font-[500]'>Beauty</Link>
-    </li>
+  ))}
+</ul>
+
+ 
+    {/* <li className='list-none relative'>
+    {category2.map((item,index)=>(
+        <div key={index}>
+            <Link to='/' className='link transition text-15px font-[500]'>{item.name}</Link>
+            {item.subcategory2 &&(
+            <ul className='submenu absolute top-[120%] left-0 min-w-[150px] bg-white shadow-md opacity-0 trasnition-all '>
+                {item.subcategory2.map((subItem2,subIndex)=>(
+                    <li key={subIndex}> 
+                    <button className='text-20px text-gray-800'>{subItem2.name}</button>
+                    </li>
+                ))}
+            </ul>
+            )}
+        </div>
+    ))}
+    </li> */}
     <li className='list-none'>
         <Link to='/' className='link transition text-15px font-[500]'>Jewellery</Link>
     </li>
