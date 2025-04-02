@@ -31,9 +31,25 @@ const Navigation = () => {
             name: "Footwear",
             subcategory:[
 
-                {name: "Wooden Chair"},{name: "Sneakers Shoes"},{ name:"Purse"}, {name:"Xbox Controller"}
+                {name: "Men Footwear",
+                    items:["shoes","slepr"]
+                },{name: "Women Gokers"},{ name:"Boys shoes"}, {name:"Girls shoes"}
             ],
           },
+          {
+            name:"Groceries",
+            subcategory:[
+                {name:"Rice"},{name:"flour(Wheat)"},{name:"Sugar"} ,{name:"Cooking Oil"},{name:"Salt"}  
+                ,{name:"Spice(masala)"} ,{name:"Lentils(daal)"} ,{name:"Sugar"} ,{name:"Tea"} ,{name:"Milk"},{name:"Egg"}  
+
+            ]
+          },
+          {
+            name:"Fashion",
+            subcategory:[
+                {name:"Men " ,items:["T-Shirts","Jeans","Casual Shirts"]},{name:"Women " ,items:["Handbags","Jewellery","Suit"]},{name:"Boys Fashion", items:["Tops","kurtis","Jeans"]} ,
+            ]
+          }
       ];
   return (
     <>
@@ -48,7 +64,7 @@ const Navigation = () => {
     <li className='!list-none'>
         <Link to='/' className='link transition text-15px font-[500]'>Home</Link>
     </li>
-    <li className='list-none relative'>
+    {/* <li className='list-none relative'>
         <Link to='/' className='link transition text-15px font-[500]'>Groceries</Link>
         <div className='submenu absolute top-[120%] left-[0%] min-w-[150px] bg-white
     shadow-md  opacity-0 trasnition-all'>
@@ -134,8 +150,8 @@ const Navigation = () => {
         </ul>
 
     </div>
-    </li>
-    <li className='list-none relative '>
+    </li> */}
+    {/* <li className='list-none relative '>
         <Link to='/' className='link transition text-15px font-[500] '>Fashion</Link>
       
     <div className='submenu absolute top-[120%] left-[0%] min-w-[150px] bg-white
@@ -266,7 +282,7 @@ const Navigation = () => {
         </ul>
 
     </div>
-    </li>
+    </li> */}
 
     <li className='list-none relative'>
         <Link to='/' className='link transition text-15px font-[500]'>Electronics </Link>
@@ -485,16 +501,36 @@ const Navigation = () => {
     </li>  */}
 
         {/* <Link to='/' className='link transition text-15px font-[500]'>Bags</Link> */}
-        <ul className="list-none flex gap-2 ">
+        <ul className=" list-none   flex gap-2 ">
   {categories.map((item, index) => (
     <li key={index} className="relative group">
       <Link to="/" className="link transition text-15px font-[500]">{item.name}</Link>
       {item.subcategory && (
         <ul className=" submenu absolute top-[120%] left-0 min-w-[150px] bg-white shadow-md opacity-0 transition-all group-hover:opacity-100">
           {item.subcategory.map((subItem, subIndex) => (
-            <li key={subIndex}>
+            <li key={subIndex} className="relative group">
               <button className=" block w-full text-left text-20px  hover:bg-gray-200 px-3 py-2 text-gray-800">{subItem.name}</button>
+            {subItem.items && (
+                <ul className=' absolute submenu left-full top-0 min-w-150px bg-white  w-32 shadow-md opacity-0 transition-all group-hover:opacity-100'>
+                    {subItem.items.map((nestedItem,nestedIndex)=>(
+            
+
+                         <li className=' list-none ' key={nestedIndex} >
+                         <Link to='/' className='block w-full px-3 py-2 hover:bg-gray-300 text-gray-900 '>
+           
+                         <Button className='!text-black w-full !text-left !justify-start'>{nestedItem}</Button>
+            
+         
+            
+                         </Link>
+                         </li>
+                      
+                    ))}
+                </ul>
+            )}
             </li>
+     
+       
           ))}
         </ul>
       )}
