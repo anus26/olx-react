@@ -23,9 +23,6 @@ const CategoryPanel = ({ isopencatpanel, setIsOpenCatPanel }) => {
             name: "OuterWear",
             items: ["Wooden Chair", "Sneakers Shoes", "Purse", "Xbox Controller"],
           },
-
-          
-          
           {
               name: "Footwear",
               items: ["Leather Watch", "Cabinet Table", "Headphones", "Sunglasses"],
@@ -80,12 +77,7 @@ const CategoryPanel = ({ isopencatpanel, setIsOpenCatPanel }) => {
         name:"Purse",
         subcategories: []
       },
-
-    
-
   ];
-
-
   const toggleDrawer = (newOpen) => () => setIsOpenCatPanel(newOpen);
 
   return (
