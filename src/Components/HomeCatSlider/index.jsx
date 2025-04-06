@@ -1,61 +1,55 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'; 
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
+import { MdArrowBackIosNew } from "react-icons/md";
+import { MdArrowForwardIos } from "react-icons/md";
 
 
 const HomeCatSlider = () => {
+  const prevRef=useRef()
+  const nextRef=useRef()
   return (
 <>
 <div className='homecatslider'>
-<div className='container'>
+<div className='container relative'>
+  <button ref={prevRef} className='custom-swiper-button-prev   absolute left-8 top-1/3 -translate-y-1/2  bg-white w-8 h-8 rounded-full shadow flex items-center justify-center z-10'><span className='text-xs'><MdArrowBackIosNew />
+  </span></button>
+  <button ref={nextRef} className='custom-swiper-button-prev   absolute  right-10 top-1/3 -translate-y-1/2 bg-white w-8 h-8 rounded-full shadow flex items-center justify-center z-10'><span className=' text-xs'><MdArrowForwardIos />
+  </span></button>
 <Swiper
         slidesPerView={7}
         spaceBetween={10}
-        navigation={true}
         modules={[Navigation]}
+        navigation={{
+          prevEl:prevRef.current,
+          nextEl:nextRef.current,
+
+          
+        }}
+        onBeforeInit={(swiper)=>{
+           swiper.params.navigation.prevEl=prevRef.current
+           swiper.params.navigation.nextEl=nextRef.current
+
+        }}
         className="mySwiper"
+
       >
-        <SwiperSlide><Link to="/"><div className='item py-4 px-3 bg-white  rounded-sm text-center flex items-center justify-center flex-col'>
-          <img src="./images/a.png" alt=""  className='w-[60px]'/>
-          <h3 className='text-[15px ] font-[500] mt-3'>Fashion</h3>
-          </div></Link></SwiperSlide>
-          <SwiperSlide><Link to="/"><div className='item py-4 px-3 bg-white  rounded-sm text-center flex items-center justify-center flex-col'>
-          <img src="./images/b.png" alt=""  className='w-[60px]'/>
-          <h3 className='text-[15px ] font-[500] mt-3'>Electronics</h3>
-          </div></Link></SwiperSlide> 
-          <SwiperSlide><Link to="/"><div className='item py-4 px-3 bg-white  rounded-sm text-center flex items-center justify-center flex-col'>
-          <img src="./images/c.png" alt=""  className='w-[60px]'/>
-          <h3 className='text-[15px ] font-[500] mt-3'>Bags</h3>
-          </div></Link></SwiperSlide>
-          <SwiperSlide><Link to="/"><div className='item py-4 px-3 bg-white  rounded-sm text-center flex items-center justify-center flex-col'>
-          <img src="./images/d.png" alt=""  className='w-[60px]'/>
-          <h3 className='text-[15px ] font-[500] mt-3'>Footwear</h3>
-          </div></Link></SwiperSlide>
-          <SwiperSlide><Link to="/"><div className='item py-4 px-3 bg-white  rounded-sm text-center flex items-center justify-center flex-col'>
-          <img src="./images/e.png" alt=""  className='w-[60px]'/>
-          <h3 className='text-[15px ] font-[500] mt-3'>Groceries</h3>
-          </div></Link></SwiperSlide>
-          <SwiperSlide><Link to="/"><div className='item py-4 px-3 bg-white  rounded-sm text-center flex items-center justify-center flex-col'>
-          <img src="./images/f.png" alt=""  className='w-[60px]'/>
-          <h3 className='text-[15px ] font-[500] mt-3'>Beauty</h3>
-          </div></Link></SwiperSlide>
-          <SwiperSlide><Link to="/"><div className='item py-4 px-3 bg-white  rounded-sm text-center flex items-center justify-center flex-col'>
-          <img src="./images/g.png" alt=""  className='w-[60px]'/>
-          <h3 className='text-[15px ] font-[500] mt-3'>Wellenss</h3>
-          </div></Link></SwiperSlide>
-          <SwiperSlide><Link to="/"><div className='item py-4 px-3 bg-white  rounded-sm text-center flex items-center justify-center flex-col'>
-          <img src="./images/h.png" alt=""  className='w-[60px]'/>
-          <h3 className='text-[15px ] font-[500] mt-3'>Jewellery</h3>
-          </div></Link></SwiperSlide>
-          <SwiperSlide><Link to="/"><div className='item py-4 px-3 bg-white  rounded-sm text-center flex items-center justify-center flex-col'>
-          <img src="./images/a.png" alt=""  className='w-[60px]'/>
-          <h3 className='text-[15px ] font-[500] mt-3'>Smart Tablets</h3>
-          </div></Link></SwiperSlide>
+        {'abcdefgh'.split('').map((alphabet)=>(
+
+          <Link to='/'>
+          <SwiperSlide key={alphabet}>
+          <div className='item rounded-[30px] bg-white  overflow-hidden'>
+           <img src={`./images/${alphabet}.png`} alt={`slide ${alphabet}`}  />
+          </div>
+       
+          </SwiperSlide>
+          </Link>
+  ))}
       </Swiper>
       
 </div>

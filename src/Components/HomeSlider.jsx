@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation,Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -21,7 +21,7 @@ const HomeSlider = () => {
 
         <Swiper
           spaceBetween={10}
-          modules={[Navigation]}
+          modules={[Navigation,Autoplay]}
           className="sliderhome"
           navigation={{
             prevEl: prevRef.current,
@@ -30,6 +30,11 @@ const HomeSlider = () => {
           onBeforeInit={(swiper) => {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
+          }}
+          autoplay={{
+            delay:3000,
+            disableOnInteraction:false
+
           }}
         >
           {/* Slides */}
