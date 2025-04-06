@@ -11,6 +11,16 @@ import { MdArrowForwardIos } from "react-icons/md";
 
 
 const HomeCatSlider = () => {
+  const items=[
+   {key:'a',label:'smart fashion'},
+   {key:'b',label:'smart fashion'},
+   {key:'c',label:'smart fashion'},
+   {key:'d',label:'smart fashion'},
+   {key:'e',label:'smart fashion'},
+   {key:'f',label:'smart fashion'},
+   {key:'g',label:'smart fashion'},
+   {key:'h',label:'smart fashion'},
+  ]
   const prevRef=useRef()
   const nextRef=useRef()
   return (
@@ -25,6 +35,7 @@ const HomeCatSlider = () => {
         slidesPerView={7}
         spaceBetween={10}
         modules={[Navigation]}
+        className="mySwiper"
         navigation={{
           prevEl:prevRef.current,
           nextEl:nextRef.current,
@@ -36,10 +47,9 @@ const HomeCatSlider = () => {
            swiper.params.navigation.nextEl=nextRef.current
 
         }}
-        className="mySwiper"
 
       >
-        {'abcdefgh'.split('').map((alphabet)=>(
+        {/* {'abcdefgh'.split('').map((alphabet)=>(
 
           <Link to='/'>
           <SwiperSlide key={alphabet}>
@@ -49,7 +59,18 @@ const HomeCatSlider = () => {
        
           </SwiperSlide>
           </Link>
-  ))}
+  ))} */}
+{items.map((item) => (
+  <SwiperSlide key={item.key}>
+    <Link to='/'>
+      <div className='item rounded-[30px] bg-white w-[180px] h-[150px] flex flex-col items-center justify-center overflow-hidden text-center p-2'>
+        <img src={`./images/${item.key}.png`} alt={item.label} className='w-[100px] mb-1' />
+        <p className='text-[12px] font-medium'>{item.label}</p>
+      </div>
+    </Link>
+  </SwiperSlide>
+))}
+
       </Swiper>
       
 </div>
