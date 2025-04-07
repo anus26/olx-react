@@ -25,7 +25,7 @@ const HomeCatSlider = () => {
   const nextRef=useRef()
   return (
 <>
-<div className='homecatslider'>
+<div className='homecatslider pt-4 py-4'>
 <div className='container relative'>
   <button ref={prevRef} className='custom-swiper-button-prev   absolute left-8 top-1/3 -translate-y-1/2  bg-white w-8 h-8 rounded-full shadow flex items-center justify-center z-10'><span className='text-xs'><MdArrowBackIosNew />
   </span></button>
