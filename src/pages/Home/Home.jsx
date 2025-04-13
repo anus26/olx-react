@@ -3,12 +3,69 @@ import HomeSlider from '../../Components/HomeSlider'
 import HomeCatSlider from '../../Components/HomeCatSlider'
 import { FaShippingFast } from "react-icons/fa";
 import AdsBannerSlider from '../../Components/AdsBannerSlider';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import ProductsSlider from '../../Components/ProductsSlider';
 const Home = () => {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
   <>
   <HomeSlider/>
   
   <HomeCatSlider/>
+
+<section className='bg-white py-4'>
+  <div className='container'>
+    <div className='flex items-center justify-between'>
+      <div className='leftsec'>
+        <h2 className='text-[22px] font-[600]'>Popular product</h2>
+        <p>Do not miss current offes until   the end of Marach</p>
+
+      </div>
+      <Box sx={{ maxWidth: { xs: 320, sm: 480 }, bgcolor: 'background.paper' }}>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        variant="scrollable"
+        scrollButtons
+        allowScrollButtonsMobile
+        aria-label="scrollable force tabs example"
+        sx={{
+          '& .MuiTab-root': {
+            color: '#aaa', // unselected tab color
+          },
+          '& .MuiTab-root.Mui-selected': {
+            color: '#ff5252 ', // selected tab text color
+          },
+          '& .MuiTabs-indicator': {
+            backgroundColor: '#ff5252 ', // underline color
+          },}}
+      >
+        <Tab label="Fashion" />
+        <Tab label="Electronics" />
+        <Tab label="Bags" />
+        <Tab label="Footwear" />
+        <Tab label="Jewellery" />
+        <Tab label="Wellenes" />
+        <Tab label="Grociries" />
+      </Tabs>
+    </Box>
+
+    </div>
+<ProductsSlider items={6} />
+
+  </div>
+</section>
+
+
+
+
+
   <section className='py-16 bg-white '> 
 <div className='container' >
   <div className='free shipping w-full py-2 p-4 border border-[#ff5252] flex items-center justify-between'>
