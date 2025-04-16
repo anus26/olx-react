@@ -3,10 +3,15 @@ import HomeSlider from '../../Components/HomeSlider'
 import HomeCatSlider from '../../Components/HomeCatSlider'
 import { FaShippingFast } from "react-icons/fa";
 import AdsBannerSlider from '../../Components/AdsBannerSlider';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation,Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import ProductsSlider from '../../Components/ProductsSlider';
+import BlogItems from '../../Components/BlogItems';
 const Home = () => {
   const [value, setValue] = React.useState(0);
 
@@ -83,6 +88,34 @@ const Home = () => {
   </div>
 <AdsBannerSlider />
 </div>
+  </section>
+  <section className='py-5 bg-white banneritems'>
+    <div className='container' >
+      <h1 className='text-[20px] font-[500]'>From the Blog</h1>
+ <Swiper
+
+        slidesPerView={4}
+        spaceBetween={10}
+        navigation={true}
+        modules={[Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide className=''>
+          <BlogItems/></SwiperSlide>
+      
+      <SwiperSlide className=''>
+          <BlogItems/></SwiperSlide>
+      <SwiperSlide className=''>
+          <BlogItems/></SwiperSlide>
+      <SwiperSlide className=''>
+          <BlogItems/></SwiperSlide>
+       <SwiperSlide className=''>
+       <BlogItems/></SwiperSlide>
+   <SwiperSlide className=''>
+   <BlogItems/></SwiperSlide>
+ </Swiper>
+    </div>
+
   </section>
   <br /><br />
   <br />
