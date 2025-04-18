@@ -6,12 +6,19 @@ import { LiaGiftSolid } from "react-icons/lia";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { IoIosChatboxes } from "react-icons/io";
-
+import Button from '@mui/material/Button';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import { FaFacebookF } from "react-icons/fa";
+import { FaYoutubeSquare } from "react-icons/fa";
+// import { FaYoutubeSquare } from "react-icons/fa";
+import { CiTwitter } from "react-icons/ci";
 const Footer = () => {
   return (
+    <>
    <footer className='py-6'>
 
-<div className='container bg-white '>
+<div className='container '>
     <div className='flex items-center justify-center gap-2 py-8 pb-8'>
         <div className=' col  flex items-center justify-center flex-col group w-[20%]'>
         <LiaShippingFastSolid className='text-[40px] transition-all group-hover:text-primary duration-200 group-hover:-translate-y-1' />
@@ -44,7 +51,7 @@ const Footer = () => {
 <hr />
 <div className='footer flex items-center py-8 pl-3'>
 
-    <div className='part1'>
+    <div className='part1 w-[25%] border-r border-black'>
         <h2 className='text-[20px] font-[600] mb-[4]'>Contact us</h2><br />
         <p  className='text-[14px] font-[400] pb-3'>Classyshop - Mega Super Store <br />
         507-Union Trade Centre France</p><br />
@@ -56,9 +63,78 @@ const Footer = () => {
             Get Expert Help</span>
             </div>
     </div>
+    <div className='part2 flex  w-[20%]'>
+        <div className='part2 '>
+            
+        <h2 className='text-[20px] font-[600] mb-12'>Products</h2>
+        < ul className='list' >
+            <li className='list-none text-[14px] w-full mb-1' >
+            <Link to="/" clasName='link text-[15px] mb-2 '>Price drop</Link></li>
+           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" clasName='link text-[15px] mb-2 '>New Products</Link></li>
+           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" clasName='link text-[15px] mb-2 '>Best Sales</Link></li>
+          <li  className='list-none text-[14px] w-full mb-2'>  <Link to="/" clasName='link text-[15px] mb-2 '>Contact us</Link></li>
+         <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" clasName='link text-[15px] mb-2 '>Sitmap</Link></li>
+        <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" clasName='link text-[15px] mb-2 '>Stores</Link>
+            </li>
+            </ul>
+        </div>
+    
+
+    </div>
+
+    <div className='part2 flex  w-[20%] '>
+        <div className='part3 '>
+            
+        <h2 className='text-[20px] font-[600] mb-12'>Products</h2>
+        < ul className='list' >
+            <li className='list-none text-[14px] w-full mb-1' >
+            <Link to="/" clasName='link text-[15px] mb-2 '>Price drop</Link></li>
+           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" clasName='link text-[15px] mb-2 '>New Products</Link></li>
+           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" clasName='link text-[15px] mb-2 '>Best Sales</Link></li>
+          <li  className='list-none text-[14px] w-full mb-2'>  <Link to="/" clasName='link text-[15px] mb-2 '>Contact us</Link></li>
+         <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" clasName='link text-[15px] mb-2 '>Sitmap</Link></li>
+        <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" clasName='link text-[15px] mb-2 '>Stores</Link>
+            </li>
+            </ul>
+        </div>
+    
+
+    </div>
+
+    <div className='part2 flex  w-[35%]'>
+        <div className='part3 '>
+            
+        <h2 className='text-[20px] font-[600] mb-12'>Subscribe to newsletter</h2>
+        <p  className='text-[14px] font-[400] pb-3'>Subscribe to our latest newsletter to get news about <br />special discounts.</p><br />
+        <div className='searchBox w-[100%] h-[50px] bg-[#e5e5e5] rounded-[5px] relative p-2'>
+       <input type="Email"  placeholder='Your Email Address' className='w-full h-35px focus:outline-none  bg-inherit p-2 text-15px mb-4'  />
+       <Button className='!text-white border   !bg-primary hover:!text-white rounded-full px-6 py-2'>
+  SUBSCRIBE
+</Button>
+<FormControlLabel  control={<Checkbox defaultChecked color="!primary"/>}label="I agree to the terms and conditions and the privacy policy" />
+
+       
+           </div>
+        </div>
+    
+
+    </div>
 </div>
 </div>
    </footer>
+   <br />
+   <div className='borderStrip  border-t  border-black py-3 bg-white'>
+<div className='container flex items-center justify-center'>
+<ul>
+    <li className='list-none '>
+<Link to="/" target='_black ' className='w-[35px] h-[35px] rounded-full border border-[rgba(0,0,0,0.1)] flex  items-center justify-center '>  
+<FaFacebookF/>
+</Link>
+    </li>
+</ul>
+</div>
+   </div>
+    </>
   )
 }
 
