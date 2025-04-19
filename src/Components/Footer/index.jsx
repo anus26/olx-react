@@ -10,9 +10,9 @@ import Button from '@mui/material/Button';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { FaFacebookF } from "react-icons/fa";
-import { FaYoutubeSquare } from "react-icons/fa";
-// import { FaYoutubeSquare } from "react-icons/fa";
-import { CiTwitter } from "react-icons/ci";
+import {FaYoutube} from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
@@ -111,7 +111,7 @@ const Footer = () => {
        <Button className='!text-white border   !bg-primary hover:!text-white rounded-full px-6 py-2'>
   SUBSCRIBE
 </Button>
-<FormControlLabel  control={<Checkbox defaultChecked color="!primary"/>}label="I agree to the terms and conditions and the privacy policy" />
+<FormControlLabel  control={<Checkbox  color="!primary"/>  }label="I agree to the terms and conditions and the privacy policy" />
 
        
            </div>
@@ -124,14 +124,38 @@ const Footer = () => {
    </footer>
    <br />
    <div className='borderStrip  border-t  border-black py-3 bg-white'>
-<div className='container flex items-center justify-center'>
-<ul>
+<div className='container flex items-center justify-between'>
+<ul className='flex items-center justify-center gap-2'>
+    <li className='list-none  flex items-center justify-center'>
+<Link to="/" target='_black ' className='w-[35px] h-[35px] rounded-full border border-[rgba(0,0,0,0.1)] flex  items-center justify-centerr group hover:bg-primary'>  
+<FaFacebookF className='text-[15px] group-hover:text-white'/>
+</Link>
+    </li>
     <li className='list-none '>
-<Link to="/" target='_black ' className='w-[35px] h-[35px] rounded-full border border-[rgba(0,0,0,0.1)] flex  items-center justify-center '>  
-<FaFacebookF/>
+<Link to="/" target='_black ' className='w-[35px] h-[35px] rounded-full border border-[rgba(0,0,0,0.1)] flex  items-center justify-center  group hover:bg-primary'>  
+<FaYoutube className='text-[15px] group-hover:text-white'/>
+</Link>
+    </li>
+    <li className='list-none '>
+<Link to="/" target='_black ' className='w-[35px] h-[35px] rounded-full border border-[rgba(0,0,0,0.1)] flex  items-center justify-center  group hover:bg-primary'>  
+< FaInstagram className='text-[15px] group-hover:text-white'/>
+</Link>
+    </li>
+    <li className='list-none '>
+<Link to="/" target='_black ' className='w-[35px] h-[35px] rounded-full border border-[rgba(0,0,0,0.1)] flex  items-center justify-center  group hover:bg-primary'>  
+<FaTwitter className='text-[15px] group-hover:text-white'/>
 </Link>
     </li>
 </ul>
+<p className='text-[13px] text-center mb-0'>© 2024 - Ecommerce Template</p>
+<div className='flex items-center'>
+    <img src="./images/c1.png" alt="card" />
+    <img src="./images/c2.png" alt="card" />
+    <img src="./images/c3.png" alt="card" />
+    <img src="./images/c4.png" alt="card" />
+    <img src="./images/c5.png" alt="card" />
+
+</div>
 </div>
    </div>
     </>

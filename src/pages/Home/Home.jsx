@@ -264,8 +264,7 @@ const Home = () => {
 
   </section>
   <Footer/>
-  <br /><br />
-  <br />
+  
   </>
   )
 }
