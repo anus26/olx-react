@@ -13,6 +13,8 @@ import Box from '@mui/material/Box';
 import ProductsSlider from '../../Components/ProductsSlider';
 import BlogItems from '../../Components/BlogItems';
 import Footer from '../../Components/Footer';
+import HomeSliderV2 from '../../Components/HomeSliderV2';
+import Bannerv3 from '../../Components/BannerV3';
 const Home = () => {
   const [value, setValue] = React.useState(0);
 
@@ -21,8 +23,21 @@ const Home = () => {
   };
   return (
   <>
-  <HomeSlider/>
-  
+  {/* <HomeSlider/> */}
+  <section className='py-6'>
+    
+  <div className='container flex items-center'>
+    <div className='part1 w-[75%]'>
+<HomeSliderV2/>
+    </div>
+    <div className='part2 w-[25%] flex items-center justify-center'>
+      <Bannerv3/>
+
+
+    </div>
+
+  </div>
+  </section>
   <HomeCatSlider/>
 
 <section className='bg-white py-4'>
