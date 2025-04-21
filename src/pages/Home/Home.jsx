@@ -23,21 +23,20 @@ const Home = () => {
   };
   return (
   <>
-  {/* <HomeSlider/> */}
-  <section className='py-6'>
+   <section className='py-6'>
     
   <div className='container flex items-center gap-5'>
     <div className='part1 w-[70%]'>
 <HomeSliderV2/>
     </div>
     <div className='part2 w-[30%] flex items-center gap-3 justify-center flex-col'>
-    <Bannerv3 info="left" image={"./images/13.jpg"}/>
-    <Bannerv3 info="right" image={"./images/14.jpg"}/>
-
-    </div>
+          <Bannerv3 image="./images/13.jpg" title="Footwear on Bata" price="399" info="right"/>
+          <Bannerv3 image="./images/14.jpg" title="Footwear on Bata" price="399" info="left"/>
+        </div>
 
   </div>
-  </section>
+  </section>{/* <HomeSlider/> */}
+ 
   <HomeCatSlider/>
 
 <section className='bg-white py-4'>
