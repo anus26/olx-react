@@ -69,12 +69,12 @@ const Footer = () => {
         <h2 className='text-[20px] font-[600] mb-12'>Products</h2>
         < ul className='list' >
             <li className='list-none text-[14px] w-full mb-1' >
-            <Link to="/" clasName='link text-[15px] mb-2 '>Price drop</Link></li>
-           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" clasName='link text-[15px] mb-2 '>New Products</Link></li>
-           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" clasName='link text-[15px] mb-2 '>Best Sales</Link></li>
-          <li  className='list-none text-[14px] w-full mb-2'>  <Link to="/" clasName='link text-[15px] mb-2 '>Contact us</Link></li>
-         <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" clasName='link text-[15px] mb-2 '>Sitmap</Link></li>
-        <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" clasName='link text-[15px] mb-2 '>Stores</Link>
+            <Link to="/" className='link text-[15px] mb-2 '>Price drop</Link></li>
+           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" className='link text-[15px] mb-2 '>New Products</Link></li>
+           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" className='link text-[15px] mb-2 '>Best Sales</Link></li>
+          <li  className='list-none text-[14px] w-full mb-2'>  <Link to="/" className='link text-[15px] mb-2 '>Contact us</Link></li>
+         <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" className='link text-[15px] mb-2 '>Sitmap</Link></li>
+        <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" className='link text-[15px] mb-2 '>Stores</Link>
             </li>
             </ul>
         </div>
@@ -88,12 +88,12 @@ const Footer = () => {
         <h2 className='text-[20px] font-[600] mb-12'>Products</h2>
         < ul className='list' >
             <li className='list-none text-[14px] w-full mb-1' >
-            <Link to="/" clasName='link text-[15px] mb-2 '>Price drop</Link></li>
-           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" clasName='link text-[15px] mb-2 '>New Products</Link></li>
-           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" clasName='link text-[15px] mb-2 '>Best Sales</Link></li>
-          <li  className='list-none text-[14px] w-full mb-2'>  <Link to="/" clasName='link text-[15px] mb-2 '>Contact us</Link></li>
-         <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" clasName='link text-[15px] mb-2 '>Sitmap</Link></li>
-        <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" clasName='link text-[15px] mb-2 '>Stores</Link>
+            <Link to="/"  className='link text-[15px] mb-2 '>Price drop</Link></li>
+           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" className='link text-[15px] mb-2 '>New Products</Link></li>
+           <li className='list-none text-[14px] w-full mb-2' > <Link to="/" className='link text-[15px] mb-2 '>Best Sales</Link></li>
+          <li  className='list-none text-[14px] w-full mb-2'>  <Link to="/" className='link text-[15px] mb-2 '>Contact us</Link></li>
+         <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" className='link text-[15px] mb-2 '>Sitmap</Link></li>
+        <li className='list-none text-[14px] w-full mb-2'>   <Link to="/" className='link text-[15px] mb-2 '>Stores</Link>
             </li>
             </ul>
         </div>

@@ -12,7 +12,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import ProductsSlider from '../../Components/ProductsSlider';
 import BlogItems from '../../Components/BlogItems';
-import Footer from '../../Components/Footer';
+
 import HomeSliderV2 from '../../Components/HomeSliderV2';
 import Bannerv3 from '../../Components/BannerV3';
 const Home = () => {
@@ -23,21 +23,10 @@ const Home = () => {
   };
   return (
   <>
-   <section className='py-6'>
-    
-  <div className='container flex items-center gap-5'>
-    <div className='part1 w-[70%]'>
-<HomeSliderV2/>
-    </div>
-    <div className='part2 w-[30%] flex items-center gap-3 justify-center flex-col'>
-          <Bannerv3 image="./images/13.jpg" title="Footwear on Bata" price="399" info="right"/>
-          <Bannerv3 image="./images/14.jpg" title="Footwear on Bata" price="399" info="left"/>
-        </div>
-
-  </div>
-  </section>{/* <HomeSlider/> */}
+  <HomeSlider/>
  
   <HomeCatSlider/>
+  
 
 <section className='bg-white py-4'>
   <div className='container'>
@@ -83,7 +72,19 @@ const Home = () => {
 </section>
 
 
-
+<section className='py-6'>
+    
+    <div className='container flex items-center gap-5'>
+      <div className='part1 w-[70%]'>
+  <HomeSliderV2/>
+      </div>
+      <div className='part2 w-[30%] flex items-center gap-3 justify-center flex-col'>
+            <Bannerv3 image="./images/13.jpg" title="Footwear on Bata" price="399" info="right"/>
+            <Bannerv3 image="./images/14.jpg" title="Footwear on Bata" price="399" info="left"/>
+          </div>
+  
+    </div>
+    </section>
 
 
   <section className='py-16 bg-white '> 
@@ -277,7 +278,7 @@ const Home = () => {
     </div>
 
   </section>
-  <Footer/>
+  
   
   </>
   )
