@@ -6,6 +6,7 @@ import Link from '@mui/material/Link';
 import HomeIcon from '@mui/icons-material/Home';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import GrainIcon from '@mui/icons-material/Grain';
+import ProductsSlider from '../../Components/ProductsSlider';
 
 function handleClick(event) {
     event.preventDefault();
@@ -47,6 +48,15 @@ const ProductListing = () => {
         <div className='container flex  gap-3 '>
              <div className='sidewrapper w-[20%] h-full bg-white p-3'>
                 <SideBar/>
+
+             </div>
+
+             <div className='rightcontent w-[80%]'>
+              <div className='grid grid-cols-4 md:grid-cols-1'>
+
+              <ProductsSlider items={6} />
+             
+              </div>
 
              </div>
         </div>

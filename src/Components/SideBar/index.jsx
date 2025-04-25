@@ -4,6 +4,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import "../SideBar/style.css"
 import { FaAngleDown } from "react-icons/fa6";
+import Rating from '@mui/material/Rating';
 import {Collapse} from 'react-collapse';
 import  Button from '@mui/material/Button';
 import { FaAngleUp } from "react-icons/fa6";
@@ -88,7 +89,7 @@ const SideBar = () => {
          </Collapse>
 <div className='box'>
 <h3 className='mb-4 text-[14px] font-[600] '>Price</h3>
-<RangeSlider className='!bg-primary !text-primary'  />
+<RangeSlider />
 <div className='flex pt-2 pb-2 priceRange'>
   <span>
     From: <strong className='text-dark'>Rs:{10}</strong>
@@ -96,6 +97,27 @@ const SideBar = () => {
   <span className='m1-auto'>
     From: <strong className='text-dark'>Rs:{5000}</strong>
   </span>
+</div>
+</div>
+<br />
+
+<div className='box'>
+<h3 className='mb-4 text-[14px] font-[600] '>Rating by filter</h3>
+<div className='w-full'>
+    <Rating name="size-small" defaultValue={5} size="small" readOnly/>
+
+</div>
+<div className='w-full cursor-pointer'>
+    <Rating name="size-small" defaultValue={4} size="small" readOnly/>
+
+</div>
+<div className='w-full cursor-pointer'>
+    <Rating name="size-small" defaultValue={3} size="small" readOnly/>
+
+</div>
+<div className='w-full cursor-pointer'>
+    <Rating name="size-small" defaultValue={2} size="small" readOnly/>
+
 </div>
 </div>
 

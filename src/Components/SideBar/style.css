@@ -4,8 +4,10 @@
   }
   .range-slider .range-slider_thumb{width: 14px !important; height: 14px !important;}
   .range-slider{height: 3px !important;}
-  .range-slider .range-slider_thumb,
-  .range-slider .range-slider_range {
+  .range-slider .range-slider__thumb{
+    background: #ff5252 !important; width: 15px  !important; height: 15px !important;
+  }
+  .range-slider .range-slider__range{
     background: #ff5252 !important;
   }
   
