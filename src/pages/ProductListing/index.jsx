@@ -13,6 +13,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 const ProductListing = () => {
+  const [itemview ,setIsItemView]=useState('')
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -67,18 +68,20 @@ const ProductListing = () => {
           <div className='rightcontent w-[80%]'>
             <div className='bg-slate-200 p-2 w-full mb-3 rounded-md flex items-center justify-between'>
               <div className='col1 flex items-center gap-3'>
-                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-black !rounded-full'>
+                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-black !rounded-full   ' onClick={()=>setIsItemView('list')}>
                   <IoGrid className='text-[rgba(0,0,0,0.7)]' />
                 </Button>
-                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-black !rounded-full'>
+                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-black !rounded-full
+                
+                ' onClick={()=>setIsItemView('grid')}>
                   <RiMenu2Fill className='text-[rgba(0,0,0,0.7)]' />
                 </Button>
-                <span className='text-[14px] font-[500] pl-3 text-[rgba(0,0,0,0.7)]'>
+                <span className='text-[14px] font-[500] pl-3 text-[rgba(0,0,0,0.7)]'  >
                   There are 27 products
                 </span>
               </div>
 
-              <div className='col2 flex items-center justify-end ml-3'>
+              <div className='col2 flex items-center justify-end ml-auto gap-3 pr-4'>
                 <span className='text-[14px] font-[500] pl-3 text-[rgba(0,0,0,0.7)]'>Sort by</span>
                 <div>
                   <Button
@@ -87,6 +90,7 @@ const ProductListing = () => {
                     aria-haspopup="true"
                     aria-expanded={open ? 'true' : undefined}
                     onClick={handleMenuClick}
+                    className='!bg-white !text-[12px] !text-[#000] !capitalize !border !border-[#000]'
                   >
                     Sales highest to lowest
                   </Button>
@@ -105,19 +109,24 @@ const ProductListing = () => {
                       horizontal: 'left',
                     }}
                   >
-                    <MenuItem onClick={handleMenuClose}>Sales highest to lowest</MenuItem>
-                    <MenuItem onClick={handleMenuClose}>Relavance</MenuItem>
-                    <MenuItem onClick={handleMenuClose}>Name A to Z</MenuItem>
-                    <MenuItem onClick={handleMenuClose}>Name Z to A</MenuItem>
-                    <MenuItem onClick={handleMenuClose}>Price Low to high</MenuItem>
-                    <MenuItem onClick={handleMenuClose}>Price high to low</MenuItem>
+                    <MenuItem onClick={handleMenuClose} className='!bg-white !text-[12px] !text-[#000] !capitalize !border !border-[#000]'>Sales highest to lowest</MenuItem>
+                    <MenuItem onClick={handleMenuClose} className='!bg-white !text-[12px] !text-[#000] !capitalize !border !border-[#000]'>Relavance</MenuItem>
+                    <MenuItem onClick={handleMenuClose} className='!bg-white !text-[12px] !text-[#000] !capitalize !border !border-[#000]'>Name A to Z</MenuItem>
+                    <MenuItem onClick={handleMenuClose} className='!bg-white !text-[12px] !text-[#000] !capitalize !border !border-[#000]'>Name Z to A</MenuItem>
+                    <MenuItem onClick={handleMenuClose} className='!bg-white !text-[12px] !text-[#000] !capitalize !border !border-[#000]'>Price Low to high</MenuItem>
+                    <MenuItem onClick={handleMenuClose} className='!bg-white !text-[12px] !text-[#000] !capitalize !border !border-[#000]'>Price high to low</MenuItem>
                   </Menu>
                 </div>
               </div>
             </div>
 
             <div className='grid grid-cols-4 md:grid-cols-1'>
-              <ProductsSlider items={6} />
+              {
+                itemview === 'grid'?
+                <ProductsSlider items={6} />
+                :
+                ''
+              }
             </div>
           </div>
         </div>
