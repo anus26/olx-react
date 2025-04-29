@@ -11,6 +11,8 @@ const App = () => {
      <Header/>
 <Routes>
   <Route path="/" excat={true} element={<Home />} />
+    
+  
   <Route path="/productListing" excat={true} element={<ProductListing />} />
 </Routes>
 <Footer/>

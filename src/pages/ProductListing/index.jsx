@@ -11,6 +11,7 @@ import { IoGrid } from "react-icons/io5";
 import { RiMenu2Fill } from "react-icons/ri";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import ProductsSliderView from '../../Components/ProductsSliderView';
 
 const ProductListing = () => {
   const [itemview ,setIsItemView]=useState('')
@@ -68,13 +69,13 @@ const ProductListing = () => {
           <div className='rightcontent w-[80%]'>
             <div className='bg-slate-200 p-2 w-full mb-3 rounded-md flex items-center justify-between'>
               <div className='col1 flex items-center gap-3'>
-                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-black !rounded-full   ' onClick={()=>setIsItemView('list')}>
-                  <IoGrid className='text-[rgba(0,0,0,0.7)]' />
-                </Button>
-                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-black !rounded-full
+               <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-black !rounded-full
                 
-                ' onClick={()=>setIsItemView('grid')}>
+                ' onClick={()=>setIsItemView('list')}>
                   <RiMenu2Fill className='text-[rgba(0,0,0,0.7)]' />
+                </Button> 
+                <Button className='!w-[40px] !h-[40px] !min-w-[40px] !text-black !rounded-full   ' onClick={()=>setIsItemView('grid')}>
+                  <IoGrid className='text-[rgba(0,0,0,0.7)]' />
                 </Button>
                 <span className='text-[14px] font-[500] pl-3 text-[rgba(0,0,0,0.7)]'  >
                   There are 27 products
@@ -120,14 +121,16 @@ const ProductListing = () => {
               </div>
             </div>
 
-            <div className='grid grid-cols-4 md:grid-cols-1'>
-              {
-                itemview === 'grid'?
-                <ProductsSlider items={6} />
-                :
-                ''
-              }
-            </div>
+            <div className={`grid ${itemview === 'grid' ? 'grid-cols-4 md:grid-cols-1' : 'grid-cols-1 md:grid-cols-1'} gap-4`}>
+  {
+    itemview === 'grid' ? (
+      <ProductsSlider items={6} />
+    ) : (
+      <ProductsSliderView itemsPerSlide={6} />
+    )
+  }
+</div>
+
           </div>
         </div>
       </div>

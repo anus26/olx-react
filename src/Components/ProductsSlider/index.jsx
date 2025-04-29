@@ -38,7 +38,7 @@ const ProductsSlider = ({ itemsPerSlide }) => {
       rating: 3,
     },
     {
-        id: 3,
+        id: 4,
         defaultImg: 'm2',
         hoverImg: 'm1',
         title: 'Smart Mobilephone',
@@ -48,7 +48,7 @@ const ProductsSlider = ({ itemsPerSlide }) => {
         rating: 3,
       },
       {
-        id: 3,
+        id: 5,
         defaultImg: 'b2',
         hoverImg: 'b1',
         title: 'Ladies Hand  bags ',
@@ -58,7 +58,7 @@ const ProductsSlider = ({ itemsPerSlide }) => {
         rating: 3,
       },
       {
-        id: 3,
+        id: 6,
         defaultImg: 'm5',
         hoverImg: 'm4',
         title: 'Fine and Natural ',
@@ -68,7 +68,7 @@ const ProductsSlider = ({ itemsPerSlide }) => {
         rating: 3,
       },
       {
-        id: 3,
+        id: 7,
         defaultImg: 'j1',
         hoverImg: 'j3',
         title: 'Gold Jewellery',
