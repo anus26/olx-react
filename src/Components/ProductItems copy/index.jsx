@@ -39,7 +39,7 @@ const ProductItemsView = ({item}) => {
     {/* {items.map((item)=>( */}
       <div key={item.id}   className='productitems rounded-md shadow-lg bg-slate-200 overflow-hidden relative
       borer-2 border-[rgba(0,0,0,0.1)]  flex items-center'>
-<div className='group  imagewrapper w-[50%] h-[220px] overflow-hidden rounded-md'>
+<div className='group  imagewrapper w-[25%] h-[220px] overflow-hidden rounded-md'>
     <Link>
 
         <div   className='relative w-full h-full overflow-hidden'>
@@ -61,23 +61,28 @@ const ProductItemsView = ({item}) => {
     </Link>
 <span  className='discount flex items-center top-[10px] z-50 absolute left-[10px] bg-primary text-white rounded-md p-1 text-[15px] font-[500]'>10%</span>
 </div>
-<div className='info p-3'>
+<div className='info p-3 px-8'>
     <h6 className='text-[13px]'>
         <Link to='/'  className='link transition-all '>
         {item.brand}
         </Link>
     </h6>
-    <h3 className='text-[14px] title mt-1 font-[500] mb-1 text-[rgba(0,0,0,0.6)]'>
-
+    <h3 className='text-[18px] title mt-1 font-[500] mb-4 text-[rgba(0,0,0,0.6)]'>
  <Link to='/'  className='link transition-all '>
  {item.title}
         </Link>
     </h3>
+<p className='text-[14px] mb-3 '>{item.parag}</p>
+
     <Rating name="size-small" defaultValue={2} size="small" readOnly/>
     <div className='flex items-center gap-4'>
        <span className='oldprice line-through text-gray-500 '>${item.oldPrice}</span>
        <span className='newprice  text-primary font-[500]'>${item.newPrice}</span>
     </div>
+
+<div className='mb-3'>
+    <Button  className='btn-org'>{item.button}</Button>
+</div>
 </div>
     </div>
  

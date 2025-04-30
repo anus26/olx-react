@@ -50,6 +50,8 @@ body{
 .homev2 .info h4{transition-duration: 2s;}
 .homev2 .info h2{transition-duration: 2.3s;}
 .homev2 .info h3{transition-duration: 3s;}
+.btn-org{background: #ff5252 !important; color: #f5f0f0 !important ; font-weight: 500 !important;}
+.btn-org:hover{background: black !important;}
 
 
 
