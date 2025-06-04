@@ -13,7 +13,7 @@ const ProductsSliderView = () => {
       oldPrice: 58.0,
       newPrice: 50.0,
       rating: 4,
-      button:'Add to Cart'
+      button:'Add to Cart '
 
     },
     {
@@ -25,6 +25,7 @@ const ProductsSliderView = () => {
       parag:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
       newPrice: 95.5,
       rating: 5,
+        button:'Add to Cart '
     },
     {
       id: 3,
@@ -36,7 +37,9 @@ const ProductsSliderView = () => {
       oldPrice: 45.0,
       newPrice: 39.99,
       rating: 3,
+        button:'Add to Cart '
     },
+
     {
       id: 4,
       defaultImg: 'm2',
@@ -47,6 +50,7 @@ const ProductsSliderView = () => {
       oldPrice: 45.0,
       newPrice: 39.99,
       rating: 3,
+        button:'Add to Cart '
 
     },
     {
@@ -59,6 +63,7 @@ const ProductsSliderView = () => {
       oldPrice: 45.0,
       newPrice: 39.99,
       rating: 3,
+        button:'Add to Cart '
     },
     {
       id: 6,
@@ -70,6 +75,7 @@ const ProductsSliderView = () => {
       oldPrice: 45.0,
       newPrice: 39.99,
       rating: 3,
+        button:'Add to Cart '
     },
     {
       id: 7,
@@ -81,6 +87,7 @@ const ProductsSliderView = () => {
       oldPrice: 45.0,
       newPrice: 39.99,
       rating: 3,
+        button:'Add to Cart '
     },
   ];
 

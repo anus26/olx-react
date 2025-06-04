@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import { FaRegHeart } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
 import { MdZoomOutMap } from "react-icons/md";
+import { MdOutlineShoppingCart } from "react-icons/md";
 const ProductItemsView = ({item}) => {
     // const items=[
     //     {
@@ -81,7 +82,7 @@ const ProductItemsView = ({item}) => {
     </div>
 
 <div className='mb-3'>
-    <Button  className='btn-org'>{item.button}</Button>
+    <Button  className='btn-org'><MdOutlineShoppingCart className='text-[20px]'/>{item.button}</Button>
 </div>
 </div>
     </div>

@@ -52,6 +52,40 @@ body{
 .homev2 .info h3{transition-duration: 3s;}
 .btn-org{background: #ff5252 !important; color: #f5f0f0 !important ; font-weight: 500 !important;}
 .btn-org:hover{background: black !important;}
+.itemViewAction button.active svg{color: #ff5252 !important; opacity: 1;}
+
+.itemViewAction Button.active   svg{
+  background-color: rgba(0,0,0,0.1) !important;
+  border: 1px solid black;
+}
+
+.Swiperzoom .swiper-button-next {
+  top: auto !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 40px !important;
+  border-radius: 0;
+  background: #ff5252 !important;
+}
+.Swiperzoom .swiper-button-prev {
+  top: 0 !important;
+  bottom: auto !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 40px !important;
+  border-radius: 0;
+  background: #ff5252 !important;
+}
+.Swiperzoom .swiper-button-next::after,
+.Swiperzoom .swiper-button-prev::after {
+  transform: rotate(90deg);
+  color: white;
+  font-size: 16px;
+}
+
 
 
 

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import ProductListing from './pages/ProductListing'
 import Footer from './Components/Footer';
+import ProductsDetails from './pages/ProductsDetails'
 const App = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const App = () => {
     
   
   <Route path="/productListing" excat={true} element={<ProductListing />} />
+  <Route path="/products/id" excat={true} element={<ProductsDetails />} />
 </Routes>
 <Footer/>
       </BrowserRouter>
