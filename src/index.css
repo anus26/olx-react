@@ -85,6 +85,23 @@ body{
   color: white;
   font-size: 16px;
 }
+.text{
+  color: #ff5252 !important;
+}
+.add{
+  background: #ff5252 !important;
+  color: #f5f0f0  !important;
+  transition: background 0.3s ease, color 0.3s ease !important; 
+   
+}
+.add:hover{
+  background: black !important;
+  color: white !important;
+
+}
+.heart:hover{
+  color: #ff5252 !important;
+}
 
 
 
