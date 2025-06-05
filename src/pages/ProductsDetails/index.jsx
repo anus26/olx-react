@@ -47,7 +47,7 @@ const handleBreadcrumbClick = (event) => {
    <section  className='bg-white'>
     
           <div className='container flex gap-3'>
-         <div className='ProductZoom w-[90%] h-[90vh] overflow-hidden'>
+         <div className='ProductZoom w-[90%] h-full overflow-hidden'>
 <ProductZoom/>
          </div>
           </div>

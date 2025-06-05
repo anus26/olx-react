@@ -10,6 +10,9 @@ import Button from '@mui/material/Button';
 import { CiHeart } from "react-icons/ci";
 import Tooltip from '@mui/material/Tooltip';
 import { IoMdGitCompare } from "react-icons/io";
+import ProductsSlider from '../ProductsSlider';
+import ProductItems from '../ProductItems';
+
 const ProductZoom = () => {
   const images = [
     '/images/pz1.jpg',
@@ -19,7 +22,7 @@ const ProductZoom = () => {
   ];
 
   const [activeImage, setActiveImage] = useState(images[0]);
-
+  const [activeTab ,setActiveTab]=useState("Description")
   return (
     <>
   <div className='flex items-start  gap-10  grid-cols-3  w-full' > 
@@ -86,6 +89,7 @@ const ProductZoom = () => {
   <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="5 star" />
 </div>
 <h4>Review(1)</h4>
+
           </div>
         </div>
         <div className='mt-2 flex gap-2'>
@@ -132,27 +136,80 @@ const ProductZoom = () => {
 {/* Description */}
 
     <div className='mt-3   '>
-      {/* <div className='gap-4 mt-3'>
+      <button onClick={()=>setActiveTab('description')} className={`heart ${activeTab ==="descrition"}`}>Description</button>
+        <button onClick={()=>setActiveTab('reviews')} className={`reviews ${activeTab ==="reviews"}`} >
+Reviews (1)</button>
+      {activeTab === 'description' &&
+      <div className='gap-4 mt-3'>
 
-      <h1 className='heart'>Description</h1>
       <br />
       <p className='border border-gray-300 bg-white rounded-full p-5'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error harum quis esse blanditiis nemo odio. Distinctio dolor pariatur commodi in illum dolorum architecto nihil, soluta minus itaque doloribus, amet ill
       </p>
 
-      </div> */}
-      <div className='reviews'>
-        <h1>
-Reviews (1)</h1>
-<div className='mt-3 rpunded-full border border-gray-300 '>
+      </div>
+}
+      <div  className=''>
+
+          
+        
+      {activeTab === 'reviews' &&  
+<div className='mt-3 rounded-md border border-gray-300  '>
 <h1 className='font-semibold m-5 text-lg'>
   
 Customer questions & answers
 </h1>
+{/* reviews text */} 
+<div className='mt-3  m-5 flex gap-3 w-full  '>
+  <img src="/public/images/1.jpg" alt=""  className='rounded-s-lg rounded-md w-20 h-10'/>
+  <div className='flex-4  w-full'>
+
+  <h3 className='font-semibold'>hòa nguyễn thị thu</h3>
+  <span className='font-semibold'>2025-06-05</span>
+  <p>great</p>
+              <div className="rating rating-xs  mr-7  flex justify-end">
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="2 star" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="4 star" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+</div>
+  </div>
+
+</div>
+  <div className='border border-gray-200 mr-10 ml-10'></div>
+{/* input */}
+<div className='mt-5 m-5 text-lg   ' >
+  <h1 className='font-semibold'>Add a review</h1>
+  <input type="text" placeholder='write a review' className='w-full p-20  mt-3 border border-gray-300'/>
+                <div className="rating rating-xs  flex mt-3">
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="2 star" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="4 star" />
+  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+</div>
+  <Button className='!mt-6 !bg-red-500 !text-white hover:!bg-black duration-300 transition-all'>Submit review </Button>
+
 </div>
 
+</div>
+
+      }
       </div>
 
+
+
     </div>
+  
+    {/* Product api */}
+    <div className='mt-3'>
+  <h1 className='font-semibold text-lg'>Related Products</h1>
+  
+    </div>
+    <SwiperSlide>
+
+<ProductsSlider  items={6} />
+    </SwiperSlide>
 </>
   );
 };

@@ -18,7 +18,7 @@ import Bannerv3 from '../../Components/BannerV3';
 const Home = () => {
   const [value, setValue] = React.useState(0);
 
-  const handleChange = (event, newValue) => {
+  const handleChange = (event, newValue) => {ikl.
     setValue(newValue);
   };
   return (
