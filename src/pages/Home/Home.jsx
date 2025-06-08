@@ -276,8 +276,8 @@ const Home = () => {
    <BlogItems/></SwiperSlide>
  </Swiper>
     </div>
-
   </section>
+   
   
   
   </>

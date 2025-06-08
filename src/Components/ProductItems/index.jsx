@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import { FaRegHeart } from "react-icons/fa6";
 import { FaCodeCompare } from "react-icons/fa6";
 import { MdZoomOutMap } from "react-icons/md";
+import {MyContext} from "../../App.jsx"
 const ProductItems = ({item}) => {
     // const items=[
     //     {
@@ -31,7 +32,11 @@ const ProductItems = ({item}) => {
     //     //   },
          
     // ]
-   
+  const {showModal}=useContext(MyContext)
+  
+  const handleIconClick = () => {
+    showModal( );
+  };
   return (
    
 <div className=''>
@@ -44,7 +49,7 @@ const ProductItems = ({item}) => {
 
         <div   className='relative w-full h-full overflow-hidden'>
 
-<img src={`./images/${item.defaultImg}.jpg`} alt="images" className='w-full h-full object-cover transition-all duration-500'/>
+<img src={`./images/${item.defaultImg}.jpg`} alt="images" className='w-full h-full object-cover transition-all duration-500' />
 
 
 <img src={`./images/${item.hoverImg}.jpg`}  alt="images" className='w-full h-full object-cover left-0 top-0  transition-all duration-500 opacity-0 absolute group-hover:opacity-100'/>
@@ -52,8 +57,8 @@ const ProductItems = ({item}) => {
     </Link>
     
 <div className='action flex items-center top-[-200px] right-[5px] z-50 absolute gap-2 flex-col w-[50px] transition-all duration-500 group-hover:top-[15px] opacity-0 group-hover:opacity-100'>
-    <Button className='!w-[30px] !h[30px] !min-w-[30px] !rounded-full !bg-white text-black hover:!bg-primary hover:text-white group '>
-         <MdZoomOutMap className='text-[18px]  !text-black  group-hover:text-white' /></Button>
+    <Button className='!w-[30px] !h[30px] !min-w-[30px] !rounded-full !bg-white text-black hover:!bg-primary hover:text-white group  ' onClick={handleIconClick}>
+         <MdZoomOutMap className='text-[18px]  !text-black  group-hover:text-white'   /></Button>
          <Button className='!w-[30px] !h[30px] !min-w-[30px] !rounded-full !bg-white text-black hover:!bg-primary hover:text-white group '>
          <FaRegHeart className='text-[18px]  !text-black  group-hover:text-white' /></Button>
          <Button className='!w-[30px] !h[30px] !min-w-[30px] !rounded-full !bg-white text-black hover:!bg-primary hover:text-white group '>
