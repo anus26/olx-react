@@ -154,11 +154,11 @@ Customer questions & answers
   <span className='font-semibold'>2025-06-05</span>
   <p>great</p>
               <div className="rating rating-xs  mr-7  flex justify-end">
-  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="2 star" />
-  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+{[...Array(5)].map((__,i)=>(
+
+<input key={i} type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+
+))}
 </div>
   </div>
 
@@ -167,13 +167,13 @@ Customer questions & answers
 {/* input */}
 <div className='mt-5 m-5 text-lg   ' >
   <h1 className='font-semibold'>Add a review</h1>
-  <input type="text" placeholder='write a review' className='w-full p-20  mt-3 border border-gray-300'/>
+  <input type="text"  defaultValue={1} placeholder='write a review' className='w-full p-20  mt-3 border border-gray-300'/>
                 <div className="rating rating-xs  flex mt-3">
-  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="2 star" />
-  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-  <input type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+{[...Array(5)].map((__,i)=>(
+
+<input key={i} type="radio" name="rating-5" className="mask mask-star-2 bg-orange-400" />
+
+))}
 </div>
   <Button className='!mt-6 !bg-red-500 !text-white hover:!bg-black duration-300 transition-all'>Submit review </Button>
 

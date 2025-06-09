@@ -105,7 +105,12 @@ body{
 .reviews:hover{
 color:#ff5252 !important
 }
+.Dialog{
+  width: 60% !important;
+  height: 50% !important;
 
+  
+}
 
 
 
