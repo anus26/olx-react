@@ -15,13 +15,21 @@ import { MdOutlineShoppingCart } from 'react-icons/md'
 import { IoMdGitCompare } from 'react-icons/io'
 import { CiHeart } from 'react-icons/ci'
 import { FaXTwitter } from "react-icons/fa6";
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Drawer from '@mui/material/Drawer';
+
 export const MyContext = createContext()
 
 const App = () => {
+  const [openCartPanel, setOpenCartPanel] = useState(true)
   const [openProducts, setOpenProducts] = useState(false)
 
   const showModal = () => {
     setOpenProducts(true)
+  }
+  const  toggleDrawer=(newopen)=>{
+     setOpenCartPanel(newopen)
   }
 
   const handleClose = () => {
@@ -41,6 +49,8 @@ const App = () => {
             <Route path="/" exact element={<Home />} />
             <Route path="/productListing" exact element={<ProductListing />} />
             <Route path="/product" exact element={<ProductsDetails />} />
+             <Route path="/login" exact element={<Login />} />
+              <Route path="/register" exact element={<Register />} />
           </Routes>
           <Footer />
         </MyContext.Provider>
@@ -106,8 +116,14 @@ const App = () => {
         </div>
 
         
-        
+
       </Dialog>
+
+       <Drawer open={openCartPanel} onClose={()=>toggleDrawer(false)} anchor={"right"}>
+      <div className='flex items-center justify-between py-3 px-3 gap-3'>
+        <h1>Shopping (1)</h1>
+      </div>
+      </Drawer>
     </>
   )
 }
