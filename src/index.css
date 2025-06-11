@@ -118,6 +118,9 @@ color:#ff5252 !important
 .button:hover{
   background: black !important;
 }
+.panel{
+  width: 500px;
+}
 
 
 
