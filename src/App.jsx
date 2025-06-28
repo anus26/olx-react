@@ -19,6 +19,10 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Drawer from '@mui/material/Drawer';
 import { IoClose } from "react-icons/io5";
+import Cartpage from './pages/Cartpage'
+import Verify from './pages/Verify'
+import Forgetpassword from './pages/Forgetpassword'
+import Checkout from './pages/Checkout'
 export const MyContext = createContext()
 
 const App = () => {
@@ -52,6 +56,10 @@ const App = () => {
             <Route path="/product" exact element={<ProductsDetails />} />
              <Route path="/login" exact element={<Login />} />
               <Route path="/register" exact element={<Register />} />
+               <Route path="/cart" exact element={<Cartpage/>} />
+               <Route path='/verify' exact element={<Verify/>}/>
+               <Route path='/Forgetpassword' exact element={<Forgetpassword/>}/>
+                 <Route path='/checkout' exact element={<Checkout/>}/>
           </Routes>
           <Footer />
         </MyContext.Provider>

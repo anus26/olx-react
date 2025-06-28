@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { TiEye } from "react-icons/ti";
 import { IoMdEyeOff } from "react-icons/io";
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router-dom';
+import Verify from '../Verify';
 const Login = () => {
     const [showpassword ,setShowPassword]=useState(false)
     const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate=useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -20,6 +22,11 @@ const Login = () => {
     setPassword('');
     
   };
+  const forgetpassword=()=>{
+
+    console.log('forgtpassword');
+    navigate('/verify')
+  }
 
   return (
     <div className=" mt-10 w-full h-full flex items-center justify-center bg-gray-100">
@@ -50,7 +57,7 @@ const Login = () => {
                 {showpassword ? <IoMdEyeOff /> :  <TiEye />}
             </div>
             </div>
-          <h2 className='font-semibold'>Forget password ?</h2>
+          <button className='font-semibold' onClick={()=>forgetpassword()}>forgetpassword?</button>
           <button
             type="submit"
             className="button  py-2 rounded  transition-all"

@@ -73,6 +73,7 @@ const Header = () => {
     </IconButton>
     </li>
     <li>
+      
     <IconButton aria-label="cart">
       <StyledBadge badgeContent={4} color="secondary" onClick={()=>context.setOpenCartPanel(true)}>
         <ShoppingCartIcon />
