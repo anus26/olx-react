@@ -18,7 +18,7 @@ const Checkout = () => {
         justify-center items-center ml-44 w-40 h-10 rounded-md mt-5'onClick={()=>toggleDrawer(true)} >
             Add Address
         </button>
-            <CardCheck open={draweropen}   onClose={()=>setDrawerOpen(false)}/>
+            <CardCheck open={draweropen}    onClose={()=>setDrawerOpen(false)} className="w-full"/>
         </div>
         <div className=' box-border rounded shadow-md bg-white w-25  mt-5 basis-96'>
      <h1 className='font-semibold text-xl'>Select Delivery Address</h1>

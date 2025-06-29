@@ -121,6 +121,9 @@ color:#ff5252 !important
 .panel{
   width: 500px;
 }
+.MuiDrawer-paperAnchorRight {
+  width: 30% !important;
+}
 
 
 
