@@ -16,7 +16,13 @@ import Radio from '@mui/material/Radio';
 
 const CardCheck = ({open,onClose}) => {
   const [selectedValue, setSelectedValue] = useState('a');
-
+  const [address,setAddress]=useState('')
+  const [country,setCountry]=useState('')
+  const [state,setState]=useState('')
+  const [Postcode,setPostCode]=useState('')
+  const [landmark,setLandMark]=useState('')
+  const [city,setCity]=useState('')
+  const [number,setNumber]=useState('')
 
   const handleChange = (event) => {
 
@@ -25,7 +31,16 @@ const CardCheck = ({open,onClose}) => {
   };
   const handlesubmit=(e)=>{
     e.preventDefault()
-    console.log(FORM SUBMITED)
+    console.log('form submitted')
+    console.log(address,'address');
+    
+    setAddress("")
+    setCity("")
+    setAddress("")
+    setNumber("")
+    setLandMark("")
+    setPostCode("")
+    setState("")
   }
 
 
@@ -43,13 +58,13 @@ const CardCheck = ({open,onClose}) => {
             <form onSubmit={handlesubmit}>
           <div className='flex flex-col m-4  gap-5 '>
 
-          <TextField type="text"    fullWidth      id="outlined-multiline-flexible" label="Addressline"  />
-             <TextField type="text"    fullWidth      id="outlined-multiline-flexible" label="City"  />
-          <TextField type="text"    fullWidth      id="outlined-multiline-flexible" label="State"  />
-          <TextField type="text"    fullWidth      id="outlined-multiline-flexible" label="Postcode"  />
-          <TextField type="text"    fullWidth      id="outlined-multiline-flexible" label="Country"  />
-          <TextField type="text"    fullWidth      id="outlined-multiline-flexible" label="Nubmer"  />
-           <TextField type="text"    fullWidth      id="outlined-multiline-flexible" label="LandMark"  />
+          <TextField type="address"   value={address}     onChange={(e) =>setAddress(e.target.value)} fullWidth      id="outlined-multiline-flexible" label="Addressline"  />
+             <TextField type="city"    value={city} fullWidth      onChange={(e) =>setCity(e.target.value)}   id="outlined-multiline-flexible" label="City"  />
+          <TextField type="state"   value={state}  fullWidth       onChange={(e) =>setState(e.target.value)}  id="outlined-multiline-flexible" label="State"  />
+          <TextField type="Postcode" value={Postcode} fullWidth       onChange={(e) =>setPostCode(e.target.value)}  id="outlined-multiline-flexible" label="Postcode"  />
+          <TextField type="country"  value={country}   fullWidth        onChange={(e) =>setCountry(e.target.value)} id="outlined-multiline-flexible" label="Country"  />
+          <TextField type="number"   value={number} fullWidth      onChange={(e) =>setNumber(e.target.value)}   id="outlined-multiline-flexible" label="Nubmer"  />
+           <TextField type="landmark" value={landmark}   fullWidth     onChange={(e) =>setLandMark(e.target.value)}    id="outlined-multiline-flexible" label="LandMark"  />
           </div>
              <div className='m-5'>
               <h1>Address Type</h1>
