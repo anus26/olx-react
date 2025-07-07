@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Search from '../search/Search'
 import Badge from '@mui/material/Badge';
@@ -9,7 +9,8 @@ import { IoIosGitCompare } from "react-icons/io";
 import { FaRegHeart } from "react-icons/fa";
 import Navigation  from './Navigation/Navigation';
 import { MyContext } from '../../App';
-
+import { Button } from '@mui/material';
+import { FaRegUser } from "react-icons/fa";
 
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
@@ -23,6 +24,11 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Header = () => {
   const context=useContext(MyContext)
+  const [isloged,setIsLoged]=useState()
+  const [open ,setOpen]=useState('')
+  const toggleopen=()=>{
+    setOpen(!open)
+  }
  
   return (
    <header className='bg-white'>
@@ -55,9 +61,35 @@ const Header = () => {
 <div className='col2 w-[40%]'><Search/></div>
 <div className='col3 w-[30%] flex items-center '>
   <ul className='flex items-center gap-3 pl-3 '>
-    <li className='list-none'>
+    { isloged === false ?
+      
+
+ (   <li className='list-none'>
   <Link to='/login' className='link transition text-[15px] font-[500]'>Login</Link> | &nbsp; <Link to='/register ' className='link transition text-[15px] font-[500]'>Register</Link>
     </li>
+ ):(
+
+    <div className='MyAccount flex flex-col gap-1 relative p-2'>
+      <Button
+        onClick={toggleopen}
+        className='!w-[28px] !h-[28px] !min-w-[40px] !rounded-full relative'
+      >
+        <FaRegUser className='text-black text-[16px]' />
+      </Button>
+
+      {open && (
+        <div className='absolute top-[120%] left-0 min-w-[150px] bg-white shadow-md transition-all z-50 p-2'>
+          <Link to='/account' className='block py-1'>My Account</Link>
+          <Link to='/orders' className='block py-1'>My Orders</Link>
+          <Link to='/settings' className='block py-1'>Settings</Link>
+          <Link to='/logout' className='block py-1'>Logout</Link>
+        </div>
+      )}
+
+      <h3 className='font-semibold'>Anus Raza</h3>
+      <p className='text-sm text-gray-600'>anusraza268@gmail.com</p>
+    </div>
+  )}
     <li>
     <IconButton aria-label="cart">
       <StyledBadge badgeContent={4} color="secondary">

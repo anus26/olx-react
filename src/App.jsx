@@ -23,6 +23,7 @@ import Cartpage from './pages/Cartpage'
 import Verify from './pages/Verify'
 import Forgetpassword from './pages/Forgetpassword'
 import Checkout from './pages/Checkout'
+import MyAccount from './pages/MyAccount'
 export const MyContext = createContext()
 
 const App = () => {
@@ -60,6 +61,7 @@ const App = () => {
                <Route path='/verify' exact element={<Verify/>}/>
                <Route path='/Forgetpassword' exact element={<Forgetpassword/>}/>
                  <Route path='/checkout' exact element={<Checkout/>}/>
+                    <Route path='/myaccount' exact element={<MyAccount/>}/>
           </Routes>
           <Footer />
         </MyContext.Provider>
