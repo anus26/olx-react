@@ -6,9 +6,11 @@ import { CiLocationOn } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
 import { FaFirstOrder } from "react-icons/fa";
 import { IoMdLogOut } from "react-icons/io";
+import Profile from '../../Components/Profile';
 
 const MyAccount = () => {
       const [click,setClick]=useState('')
+      const [open,setOpen]=useState('')
         const [image, setImage] = useState(null);
 
   const handleImageChange = (e) => {
@@ -17,29 +19,55 @@ const MyAccount = () => {
       setImage(URL.createObjectURL(file)); // local preview
     }
   };
+  const getInitial=(name)=>{ return name ? name.charAt(0).toUpperCase() : '?';
+  }
+  const user={
+      name:'Anus raza',
+      email:"anusraza268@gmail.com"
+  }
+
   return (
-      <section>
-        <div className='container part-1 m-5'>
-        <div className='border bg-white rounded-sm shadow-md w-72 h-60 m-5 items-center  relative  z-0'>
-             <div className='p-4'>
-      <img
-        src={image || './images/circle.png'} // default image ya uploaded image
-        alt="preview"
-        className='w-24 h-24 rounded-full object-cover ml-3'
-      />
-      <input type="file" onChange={handleImageChange} className='mt-2' />
+      <section className='flex flex-1 '>
+        <div className='  m-10 '>
+        <div className='border bg-white rounded-sm shadow-md w-72 h-60 m-5 items-center  relative  '>
+             <div className='p-4 flex flex-col justify-center items-center'>
+                  <label htmlFor="fileInput" className='cursor-pointer'>
+
+    
+    {image ? (
+          <img
+          src={image}
+          alt={user}
+          className='w-24 h-24 rounded-full object-cover'/>
+      ):(
+          <div className='w-24 h-24  rounded-full bg-purple-500 flex items-center justify-center text-white text-6xl font-bold'>
+            {getInitial(user.name)}
+          </div>  
+      )
+}
+</label>
+<input type="file" onChange={handleImageChange} className='hidden ' id='fileInput'/>
     </div>
            <h1  className='font-semibold text-xl ml-6 flex items-center justify-center'>My Account</h1>
-           <p className='ml-3 justify-center flex'>anusraza268@gmail.com</p>
+           <p className='ml-3 justify-center flex'>{user.email}</p>
         </div>
         <div className='border bg-gray-100 rounded-sm shadow-md w-72 h-80 m-5 relative -mt-6   '> 
 
+              <Link className=''>
 <div className={` flex gap-3   hover:bg-gray-200  w-72   p-4 ${click ===  'profile'?'bg-white  border-l-4 border-primary  font-semibold':'hover:bg-gray-200'}`}
  onClick={()=>setClick('profile')}>
 
     <CgProfile className={`  text-xl duration-500 transition-all ${click === 'profile'? 'text-primary  ':''}`}
-    onClick={()=>setClick('profile')} />  <Link>MY Profile</Link>
+    onClick={()=>setClick('profile')} />
+    MY Profile
 </div>
+    </Link>
+
+      
+
+          
+      
+
  
       
 
@@ -72,8 +100,10 @@ onClick={()=>setClick('logout')}>
 
         </div>
         </div>
-        <div className='container part-2'>
-
+        <div className=' flex justify-center items-center  '>
+            
+{click === 'profile'  && <Profile/>}
+            
         </div>
       </section>
   )

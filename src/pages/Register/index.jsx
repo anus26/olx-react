@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { TiEye } from "react-icons/ti";
 import { IoMdEyeOff } from "react-icons/io";
 import { Link } from 'react-router';
+import MyAccount from '../MyAccount';
 
 const Register = () => {
     const [showpassword ,setShowPassword]=useState(false)
@@ -24,6 +25,7 @@ const Register = () => {
     setPassword('')
     
   };
+ 
 
   return (
     <div className=" mt-10 w-full h-full flex items-center justify-center bg-gray-100">
