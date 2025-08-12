@@ -7,6 +7,8 @@ import { CiHeart } from "react-icons/ci";
 import { FaFirstOrder } from "react-icons/fa";
 import { IoMdLogOut } from "react-icons/io";
 import Profile from '../../Components/Profile';
+import MyList from '../../Components/MyList';
+import MyAddress from '../../Components/MyAddresss';
 
 const MyAccount = () => {
       const [click,setClick]=useState('')
@@ -103,8 +105,15 @@ onClick={()=>setClick('logout')}>
         <div className=' flex justify-center items-center  '>
             
 {click === 'profile'  && <Profile/>}
-            
         </div>
+          <div className=' flex mt-11   '>
+
+        {click === 'list'  && <MyList/>}    
+          </div>
+          <div className='flex mt-11'>
+         {click === 'address' && <MyAddress/>}
+          </div>
+
       </section>
   )
 }
