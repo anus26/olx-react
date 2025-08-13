@@ -28,7 +28,7 @@ const Home = () => {
   <HomeCatSlider/>
   
 
-<section className='bg-white py-4'>
+<section className='bg-white py-4 '>
   <div className='container'>
     <div className='flex items-center justify-between'>
       <div className='leftsec'>

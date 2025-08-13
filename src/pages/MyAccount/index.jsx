@@ -9,6 +9,7 @@ import { IoMdLogOut } from "react-icons/io";
 import Profile from '../../Components/Profile';
 import MyList from '../../Components/MyList';
 import MyAddress from '../../Components/MyAddresss';
+import Order from '../../Components/Order';
 
 const MyAccount = () => {
       const [click,setClick]=useState('')
@@ -29,8 +30,8 @@ const MyAccount = () => {
   }
 
   return (
-      <section className='flex flex-1 '>
-        <div className='  m-10 '>
+      <section className='flex overflow-hidden '>
+        <div className='  m-6 '>
         <div className='border bg-white rounded-sm shadow-md w-72 h-60 m-5 items-center  relative  '>
              <div className='p-4 flex flex-col justify-center items-center'>
                   <label htmlFor="fileInput" className='cursor-pointer'>
@@ -112,6 +113,9 @@ onClick={()=>setClick('logout')}>
           </div>
           <div className='flex mt-11'>
          {click === 'address' && <MyAddress/>}
+          </div>
+            <div className=' mt-10  '>
+         {click === 'order' && <Order/>}
           </div>
 
       </section>
