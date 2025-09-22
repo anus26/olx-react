@@ -49,7 +49,7 @@ const Checkout = () => {
         </button>
          <button className='bg-black text-white hover:bg-black transition-all duration-300 flex 
         justify-center items-center ml-20 w-60 h-10 rounded-md mt-5'onClick={()=>toggleDrawer(true)} >
-           <img src="./images/shopping-bag.png" alt="shopping" className='w-8' />   Cash on Delivery
+           <img src="./images/shopping-bag.png" alt="" className='w-8' />   Cash on Delivery
         </button>
      </div>
         </div>

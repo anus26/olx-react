@@ -82,7 +82,7 @@ const Navigation = () => {
         <ul className=" submenu absolute top-[120%] left-0 min-w-[150px] bg-white shadow-md opacity-0 transition-all group-hover:opacity-100">
           {item.subcategory.map((subItem, subIndex) => (
             <li key={subIndex} className="relative group">
-              <button className=" block w-full text-left text-20px  hover:bg-gray-200 px-3 py-2 text-gray-800">{subItem.name}</button>
+              <Link to='/productlisting' className=" block w-full text-left text-20px  hover:bg-gray-200 px-3 py-2 text-gray-800">{subItem.name}</Link>
             {subItem.items && (
                 <ul className=' absolute submenu left-full top-0 min-w-150px bg-white  w-32 shadow-md opacity-0 transition-all group'>
                     {subItem.items.map((nestedItem,nestedIndex)=>(

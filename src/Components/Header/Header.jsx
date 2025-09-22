@@ -79,10 +79,10 @@ const Header = () => {
 
       {open && (
         <div className='absolute top-[120%] left-0 min-w-[150px] bg-white shadow-md transition-all z-50 p-2'>
-          <Link to='/account' className='block py-1'>My Account</Link>
-          <Link to='/orders' className='block py-1'>My Orders</Link>
-          <Link to='/settings' className='block py-1'>Settings</Link>
-          <Link to='/logout' className='block py-1'>Logout</Link>
+          <Link to='/myaccount' className='block py-1'>My Account</Link>
+          <Link to='/myaccount' className='block py-1'>My Orders</Link>
+          <Link to='/myaccount' className='block py-1'>Settings</Link>
+          <Link to='/myaccount' className='block py-1'>Logout</Link>
         </div>
       )}
 

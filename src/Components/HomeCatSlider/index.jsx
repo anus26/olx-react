@@ -62,7 +62,7 @@ const HomeCatSlider = () => {
   ))} */}
 {items.map((item) => (
   <SwiperSlide key={item.key}>
-    <Link to='/'>
+    <Link to='/productlisting'>
       <div className='item group rounded-[30px] bg-white w-[150px] h-[150px] flex flex-col items-center justify-center overflow-hidden text-center p-2'>
         <img src={`./images/${item.key}.png`} alt={item.label} className='w-[70px] mb-1  object-cover transition-all duration-200 group-hover:scale-105 ' />
         <p className='text-[12px] font-medium'>{item.label}</p>

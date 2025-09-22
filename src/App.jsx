@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react'
 import Header from './Components/Header/Header'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import ProductListing from './pages/ProductListing'
 import ProductsDetails from './pages/ProductsDetails'
@@ -26,6 +26,7 @@ import Checkout from './pages/Checkout'
 import MyAccount from './pages/MyAccount'
 export const MyContext = createContext()
 
+
 const App = () => {
   const [openCartPanel, setOpenCartPanel] = useState(false)
   const [openProducts, setOpenProducts] = useState(false)
@@ -48,7 +49,8 @@ const App = () => {
 
   return (
     <>
-      <BrowserRouter>
+
+
         <MyContext.Provider value={values}>
           <Header />
           <Routes>
@@ -65,8 +67,6 @@ const App = () => {
           </Routes>
           <Footer />
         </MyContext.Provider>
-      </BrowserRouter>
-
       {/* Product Modal Dialog */}
       <Dialog open={openProducts} onClose={handleClose} fullWidth maxWidth="md">
           <DialogActions>
@@ -176,11 +176,15 @@ const App = () => {
 
     {/* Action Buttons */}
     <div className="flex justify-center gap-4 px-4 py-4 border-t border-gray-300">
-      <button className="bg-primary text-white px-4 py-2 rounded hover:bg-white transition">Checkout</button>
-      <button className="bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400 transition">View Cart</button>
+      <Link to='/checkout' className="bg-primary text-white px-4 py-2 rounded hover:bg-white transition">Checkout</Link>
+<Link to="/cart" className="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400">
+  View Cart
+</Link>
+
     </div>
   </div>
 </Drawer>
+
 
     </>
   )

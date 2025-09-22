@@ -45,7 +45,7 @@ const ProductItems = ({item}) => {
       <div key={item.id}   className='productitems rounded-md shadow-lg bg-slate-200 overflow-hidden relative
       borer-2 border-[rgba(0,0,0,0.1)] '>
 <div className='group  imagewrapper w-full h-[220px] overflow-hidden rounded-md'>
-    <Link>
+    <Link to='/product'>
 
         <div   className='relative w-full h-full overflow-hidden'>
 
@@ -68,13 +68,13 @@ const ProductItems = ({item}) => {
 </div>
 <div className='info p-3'>
     <h6 className='text-[13px]'>
-        <Link to='/'  className='link transition-all '>
+        <Link to='/product'  className='link transition-all '>
         {item.brand}
         </Link>
     </h6>
     <h3 className='text-[14px] title mt-1 font-[500] mb-1 text-[rgba(0,0,0,0.6)]'>
 
- <Link to='/'  className='link transition-all '>
+ <Link to='/product'  className='link transition-all '>
  {item.title}
         </Link>
     </h3>
