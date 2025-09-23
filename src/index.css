@@ -12,7 +12,11 @@ body{
     
   }
   .link:hover{color:#ff5252 ; text-decoration: none;}
-.container{width: 95%; margin: auto;}
+.container {
+  width: 100% !important;
+  max-width: 1400px !important;
+  margin: auto !important;
+}
 /* header .top-strip{
     border-top: 1px solid rgba(0,0,0, 0.1);
     border-bottom:1px solid rgba(0,0,0, 0.2);
@@ -68,6 +72,7 @@ body{
   height: 40px !important;
   border-radius: 0;
   background: #ff5252 !important;
+  
 }
 .Swiperzoom .swiper-button-prev {
   top: 0 !important;
@@ -84,7 +89,14 @@ body{
   transform: rotate(90deg);
   color: white;
   font-size: 16px;
+
 }
+/* Swiper ke default blue navigation arrows hide karne ke liye */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
 .text{
   color: #ff5252 !important;
 }

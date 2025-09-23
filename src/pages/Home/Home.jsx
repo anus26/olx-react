@@ -29,7 +29,7 @@ const Home = () => {
   
 
 <section className='bg-white py-4 '>
-  <div className='container'>
+  <div className='container '>
     <div className='flex items-center justify-between'>
       <div className='leftsec'>
         <h2 className='text-[22px] font-[600]'>Popular product</h2>
@@ -88,8 +88,8 @@ const Home = () => {
 
 
   <section className='py-16 bg-white '> 
-<div className='container' >
-  <div className='free shipping w-full py-2 p-4 border border-[#ff5252] flex items-center justify-between'>
+<div className='container ' >
+  <div className='free shipping ml-20 w-[80%]  py-2 p-4 border border-[#ff5252] flex items-center  text-center justify-between'>
     <div className='col1 flex items-center rounded-md gap-4 mb-5'>
     <FaShippingFast  className='text-[50px]'/>
     <span className='text-[20px] font-bold uppercase'>Free Shipping</span>
@@ -192,8 +192,8 @@ const Home = () => {
 </section>
 <section className='py-16 bg-white '> 
 <div className='container' >
-  <div className='free shipping w-full py-2 p-4 border border-[#ff5252] flex items-center justify-between'>
-    <div className='col1 flex items-center rounded-md gap-4 mb-5'>
+  <div className='free shipping  ml-20 w-[80%]  py-2 p-4 border border-[#ff5252] flex items-center justify-between'>
+    <div className='col1 flex  items-center rounded-md gap-4 mb-5'>
     <FaShippingFast  className='text-[50px]'/>
     <span className='text-[20px] font-bold uppercase'>Free Shipping</span>
     </div>

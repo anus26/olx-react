@@ -9,8 +9,8 @@ const HomeSlider = () => {
   const nextRef = useRef(null);
 
   return (
-    <div className="homeslider py-4">
-      <div className="container relative">
+    <div className="container homeslider py-6 ">
+      <div className=" relative">
         {/* Custom Nav Buttons */}
         <button ref={prevRef} className="custom-swiper-button-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white w-8 h-8 rounded-full shadow flex items-center justify-center">
           <span className="text-black text-xs">&lt;</span>
